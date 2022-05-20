@@ -12,8 +12,6 @@ jobs:
       - run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
       - run: docker build -t aliceychang/react-test -f ./client/Dockerfile.dev ./client
       - run: docker run -e CI=true aliceychang/react-redis-postgres npm test
-
-      - name: Generate deployment packages
       - run: docker build -t aliceychang/multi-client ./client
       - run: docker build -t aliceychang/multi-nginx ./nginx
       - run: docker build -t aliceychang/multi-server ./server
