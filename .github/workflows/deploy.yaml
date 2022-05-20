@@ -16,7 +16,7 @@ jobs:
       - run: docker build -t aliceychang/multi-nginx ./nginx
       - run: docker build -t aliceychang/multi-server ./server
       - run: docker build -t aliceychang/multi-worker ./worker
-      - run: docker push -t aliceychang/multi-client
-      - run: docker push -t aliceychang/multi-nginx
-      - run: docker push -t aliceychang/multi-server
-      - run: docker push -t aliceychang/multi-worker
+      - run: docker push aliceychang/multi-client
+      - run: docker push aliceychang/multi-nginx
+      - run: docker push aliceychang/multi-server
+      - run: docker push aliceychang/multi-worker
